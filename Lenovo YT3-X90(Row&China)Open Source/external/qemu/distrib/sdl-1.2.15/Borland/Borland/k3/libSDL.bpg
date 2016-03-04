@@ -1,0 +1,119 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.02.5
+#------------------------------------------------------------------------------
+ifndef ROOT
+ROOT = /home/dominique/kylix
+endif
+#------------------------------------------------------------------------------
+MAKE = make -$(MAKEFLAGS) -f$**
+DCC =dcc $<
+#------------------------------------------------------------------------------
+PROJECTS = graywin checkkeys loopwave testalpha testbitmap testcdrom testerror \
+  testgamma testgl testjoystick testkeys testlock testpalette testsem testsprite \
+  testthread testtimer testtypes testver testvidinfo testwin testwm threadwin \
+  torturethread aliens
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+graywin: graywin.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+checkkeys: checkkeys.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+loopwave: loopwave.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testalpha: testalpha.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testbitmap: testbitmap.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testcdrom: testcdrom.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testerror: testerror.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testgamma: testgamma.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testgl: testgl.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testjoystick: testjoystick.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testkeys: testkeys.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testlock: testlock.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testpalette: testpalette.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testsem: testsem.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testsprite: testsprite.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testthread: testthread.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testtimer: testtimer.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testtypes: testtypes.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testver: testver.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testvidinfo: testvidinfo.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testwin: testwin.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+testwm: testwm.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+threadwin: threadwin.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+torturethread: torturethread.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+aliens: aliens.bpr
+	$(ROOT)/bin/bpr2mak $<
+	make -$(MAKEFLAGS) -f$(basename $<).mak
+
+

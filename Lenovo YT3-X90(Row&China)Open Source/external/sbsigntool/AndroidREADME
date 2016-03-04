@@ -1,0 +1,5 @@
+steps for integration:
+1) Download and Extract sbsigntool_0.6.orig.tar.gz
+2) Download and extract sbsigntool_0.6-0ubuntu7.debian.tar.gz
+3) Apply debian patch series on top of sbsigntool original package
+4) 

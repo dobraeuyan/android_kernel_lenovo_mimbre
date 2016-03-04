@@ -1,0 +1,64 @@
+commit 2632827c328bb49ab147bb6d48ca22340d10549b
+Author: Fiat Christophe <christophe.fiat@intel.com>
+Date:   Fri Feb 27 12:26:19 2015 +0100
+
+    [REVERTME] Toggle Wlan Enable upon Wifi ON/OFF
+    
+    Toggle Wlan Enable directly without using _PS0/_PS3 BIOS functions that
+    are not doing the job correctly.
+    
+    Change-Id: I4da813edc282c26fb7229610b7ca7fcafbbd0cd6
+    Tracked-On: https://jira01.devtools.intel.com/browse/IMINAN-20020
+    Signed-off-by: Fiat Christophe <christophe.fiat@intel.com>
+    Reviewed-on: https://android.intel.com:443/336367
+
+diff --git a/Makefile b/Makefile
+index 16580cb..07ff530 100644
+--- a/Makefile
++++ b/Makefile
+@@ -145,6 +145,9 @@ $(info bcmdhd: Compiling for 4354,4356 chip)
+ #  DHDCFLAGS += -DMAX_AP_CLIENT_CNT=10
+ #  DHDCFLAGS += -DMAX_GO_CLIENT_CNT=5
+ 
++# Workarounds
++  DHDCFLAGS += -DCUSTOM_WLAN_EN_GPIO_VALUE=303
++
+ # New Features
+   DHDCFLAGS += -DWL11U
+   DHDCFLAGS += -DMFP
+diff --git a/dhd_linux_platdev.c b/dhd_linux_platdev.c
+index df0c510..3d4ddd5 100644
+--- a/dhd_linux_platdev.c
++++ b/dhd_linux_platdev.c
+@@ -514,7 +514,14 @@ int wifi_platform_set_power(wifi_adapter_info_t *adapter, bool on, unsigned long
+ 			adev->flags.power_manageable = 1;
+ 
+ 			if (on) {
++#if defined(CUSTOM_WLAN_EN_GPIO_VALUE)
++				DHD_ERROR(("%s Raise Wlan En GPIO Number: %d\n", __FUNCTION__, CUSTOM_WLAN_EN_GPIO_VALUE));
++				gpio_set_value(CUSTOM_WLAN_EN_GPIO_VALUE, 1);
++#else
++				DHD_ERROR(("%s Set Wifi Device to D0\n", __FUNCTION__));
+ 				acpi_device_set_power(adev, ACPI_STATE_D0);
++#endif /* CUSTOM_WLAN_EN_GPIO_VALUE */
++
+ #if defined(BCMPCIE)
+ 				if (pcidev) {
+ 					pci_set_power_state(pcidev, PCI_D0);
+@@ -536,7 +543,16 @@ int wifi_platform_set_power(wifi_adapter_info_t *adapter, bool on, unsigned long
+ 					pci_set_power_state(pcidev, PCI_D3hot);
+ 				}
+ #endif
++
++#if defined(CUSTOM_WLAN_EN_GPIO_VALUE)
++				DHD_ERROR(("%s Lower Wlan En GPIO Number: %d\n", __FUNCTION__, CUSTOM_WLAN_EN_GPIO_VALUE));
++				gpio_set_value(CUSTOM_WLAN_EN_GPIO_VALUE, 0);
++#else
++				DHD_ERROR(("%s Set Wifi Device to D3 Cold\n", __FUNCTION__));
+ 				acpi_device_set_power(adev, ACPI_STATE_D3_COLD);
++#endif  /* CUSTOM_WLAN_EN_GPIO_VALUE */
++
++
+ 			}
+ 		}
+ 	}

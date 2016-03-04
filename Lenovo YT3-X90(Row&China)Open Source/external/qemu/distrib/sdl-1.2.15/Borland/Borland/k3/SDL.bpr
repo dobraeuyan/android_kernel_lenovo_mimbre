@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.09"/>
+    <PROJECT value="libSDL.so"/>
+    <OBJFILES value="../../src/SDL.o ../../src/SDL_error.o ../../src/SDL_fatal.o 
+      ../../src/SDL_getenv.o ../../src/audio/SDL_audio.o 
+      ../../src/audio/SDL_audiocvt.o ../../src/audio/SDL_audiodev.o 
+      ../../src/audio/SDL_audiomem.o ../../src/audio/SDL_mixer.o 
+      ../../src/audio/SDL_wave.o ../../src/cdrom/SDL_cdrom.o 
+      ../../src/cdrom/linux/SDL_syscdrom.o ../../src/endian/SDL_endian.o 
+      ../../src/events/SDL_active.o ../../src/events/SDL_events.o 
+      ../../src/events/SDL_expose.o ../../src/events/SDL_keyboard.o 
+      ../../src/events/SDL_mouse.o ../../src/events/SDL_quit.o 
+      ../../src/events/SDL_resize.o ../../src/file/SDL_rwops.o 
+      ../../src/joystick/SDL_joystick.o 
+      ../../src/joystick/linux/SDL_sysjoystick.o ../../src/thread/SDL_thread.o 
+      ../../src/thread/linux/SDL_syscond.o ../../src/thread/linux/SDL_sysmutex.o 
+      ../../src/thread/linux/SDL_syssem.o ../../src/thread/linux/SDL_systhread.o 
+      ../../src/timer/SDL_timer.o ../../src/timer/linux/SDL_systimer.o 
+      ../../src/video/SDL_blit_0.o ../../src/video/SDL_blit_1.o 
+      ../../src/video/SDL_blit_A.o ../../src/video/SDL_blit.o 
+      ../../src/video/SDL_blit_N.o ../../src/video/SDL_bmp.o 
+      ../../src/video/SDL_cursor.o ../../src/video/SDL_gamma.o 
+      ../../src/video/SDL_pixels.o ../../src/video/SDL_RLEaccel.o 
+      ../../src/video/SDL_stretch.o ../../src/video/SDL_surface.o 
+      ../../src/video/SDL_video.o ../../src/video/SDL_yuv.o 
+      ../../src/video/SDL_yuv_mmx.o ../../src/video/SDL_yuv_sw.o"/>
+    <RESFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="rtl.bpi visualclx.bpi dataclx.bpi visualdbclx.bpi netclx.bpi 
+      netdataclx.bpi xmlrtl.bpi indy.bpi webdsnapclx.bpi websnapclx.bpi 
+      soaprtl.bpi"/>
+    <PATHCPP value=".;../../src:../../src/audio:../../src/cdrom:../../src/cdrom/linux:../../src/endian:../../src/events:../../src/file:../../src/joystick:../../src/joystick/linux:../../src/thread:../../src/thread/linux:../../src/timer:../../src/timer/linux:../../src/video"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)/lib/debug"/>
+    <RELEASELIBPATH value="$(BCB)/lib/release"/>
+    <LINKER value="ilink"/>
+    <USERDEFINES value="BUILD_SDL"/>
+    <SYSDEFINES value="_NO_VCL:USEPACKAGES:_RTLDLL"/>
+    <MAINSOURCE value="SDL.bpf"/>
+    <INCLUDEPATH value="$(BCB)/headers/SDL-1.2.4/include:$(BCB)/headers/SDL-1.2.4/src/video:$(BCB)/headers/SDL-1.2.4/src/timer/linux:$(BCB)/headers/SDL-1.2.4/src/timer:$(BCB)/headers/SDL-1.2.4/src/thread/linux:$(BCB)/headers/SDL-1.2.4/src/thread:$(BCB)/headers/SDL-1.2.4/src/joystick/linux:$(BCB)/headers/SDL-1.2.4/src/joystick:$(BCB)/headers/SDL-1.2.4/src/file:$(BCB)/headers/SDL-1.2.4/src/events:$(BCB)/headers/SDL-1.2.4/src/endian:$(BCB)/headers/SDL-1.2.4/src/cdrom/linux:$(BCB)/headers/SDL-1.2.4/src/cdrom:$(BCB)/headers/SDL-1.2.4/src/audio:$(BCB)/headers/SDL-1.2.4/src:$(BCB)/include/stlport:$(BCB)/include:$(BCB)/include/vcl:/usr/include"/>
+    <LIBPATH value="$(BCB)/headers/SDL-1.2.4/src/video:$(BCB)/headers/SDL-1.2.4/src/timer/linux:$(BCB)/headers/SDL-1.2.4/src/timer:$(BCB)/headers/SDL-1.2.4/src/thread/linux:$(BCB)/headers/SDL-1.2.4/src/thread:$(BCB)/headers/SDL-1.2.4/src/joystick/linux:$(BCB)/headers/SDL-1.2.4/src/joystick:$(BCB)/headers/SDL-1.2.4/src/file:$(BCB)/headers/SDL-1.2.4/src/events:$(BCB)/headers/SDL-1.2.4/src/endian:$(BCB)/headers/SDL-1.2.4/src/cdrom/linux:$(BCB)/headers/SDL-1.2.4/src/cdrom:$(BCB)/headers/SDL-1.2.4/src/audio:$(BCB)/headers/SDL-1.2.4/src:$(BCB)/lib/obj:$(BCB)/lib:/usr/lib:/lib:/usr/X11R6/lib:$(BCB)/bin"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-tD -VP -Od -H=$(HOME)/.borland/clx69.csm -Hc -Vx -X- -r- -a8 -b- -k -y -v 
+      -vi- -c"/>
+    <PFLAGS value="-P -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-N&quot;&quot; -D&quot;&quot; -aa -Tpd -x -Gn -v"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="borinitso.o $(PACKAGES) $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) libborcrtl.so libborstl.so libborunwind.so 
+      libpthread.so libc.so libm.so"/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="SDL.bpf" FORMNAME="" UNITNAME="SDL" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/SDL.c" FORMNAME="" UNITNAME="SDL.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/SDL_error.c" FORMNAME="" UNITNAME="SDL_error.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/SDL_fatal.c" FORMNAME="" UNITNAME="SDL_fatal.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/SDL_getenv.c" FORMNAME="" UNITNAME="SDL_getenv.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/audio/SDL_audio.c" FORMNAME="" UNITNAME="SDL_audio.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/audio/SDL_audiocvt.c" FORMNAME="" UNITNAME="SDL_audiocvt.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/audio/SDL_audiodev.c" FORMNAME="" UNITNAME="SDL_audiodev.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/audio/SDL_audiomem.c" FORMNAME="" UNITNAME="SDL_audiomem.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/audio/SDL_mixer.c" FORMNAME="" UNITNAME="SDL_mixer.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/audio/SDL_wave.c" FORMNAME="" UNITNAME="SDL_wave.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/cdrom/SDL_cdrom.c" FORMNAME="" UNITNAME="SDL_cdrom" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/cdrom/linux/SDL_syscdrom.c" FORMNAME="" UNITNAME="SDL_syscdrom" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/endian/SDL_endian.c" FORMNAME="" UNITNAME="SDL_endian" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/events/SDL_active.c" FORMNAME="" UNITNAME="SDL_active.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/events/SDL_events.c" FORMNAME="" UNITNAME="SDL_events.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/events/SDL_expose.c" FORMNAME="" UNITNAME="SDL_expose.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/events/SDL_keyboard.c" FORMNAME="" UNITNAME="SDL_keyboard.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/events/SDL_mouse.c" FORMNAME="" UNITNAME="SDL_mouse.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/events/SDL_quit.c" FORMNAME="" UNITNAME="SDL_quit.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/events/SDL_resize.c" FORMNAME="" UNITNAME="SDL_resize.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/file/SDL_rwops.c" FORMNAME="" UNITNAME="SDL_rwops" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/joystick/SDL_joystick.c" FORMNAME="" UNITNAME="SDL_joystick" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/joystick/linux/SDL_sysjoystick.c" FORMNAME="" UNITNAME="SDL_sysjoystick" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/thread/SDL_thread.c" FORMNAME="" UNITNAME="SDL_thread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/thread/linux/SDL_syscond.c" FORMNAME="" UNITNAME="SDL_syscond.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/thread/linux/SDL_sysmutex.c" FORMNAME="" UNITNAME="SDL_sysmutex.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/thread/linux/SDL_syssem.c" FORMNAME="" UNITNAME="SDL_syssem.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/thread/linux/SDL_systhread.c" FORMNAME="" UNITNAME="SDL_systhread.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/timer/SDL_timer.c" FORMNAME="" UNITNAME="SDL_timer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/timer/linux/SDL_systimer.c" FORMNAME="" UNITNAME="SDL_systimer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_blit_0.c" FORMNAME="" UNITNAME="SDL_blit_0.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_blit_1.c" FORMNAME="" UNITNAME="SDL_blit_1.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_blit_A.c" FORMNAME="" UNITNAME="SDL_blit_A.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_blit.c" FORMNAME="" UNITNAME="SDL_blit.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_blit_N.c" FORMNAME="" UNITNAME="SDL_blit_N.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_bmp.c" FORMNAME="" UNITNAME="SDL_bmp.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_cursor.c" FORMNAME="" UNITNAME="SDL_cursor.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_gamma.c" FORMNAME="" UNITNAME="SDL_gamma.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_pixels.c" FORMNAME="" UNITNAME="SDL_pixels.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_RLEaccel.c" FORMNAME="" UNITNAME="SDL_RLEaccel.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_stretch.c" FORMNAME="" UNITNAME="SDL_stretch.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_surface.c" FORMNAME="" UNITNAME="SDL_surface.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_video.c" FORMNAME="" UNITNAME="SDL_video.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_yuv.c" FORMNAME="" UNITNAME="SDL_yuv.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_yuv_mmx.c" FORMNAME="" UNITNAME="SDL_yuv_mmx.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="../../src/video/SDL_yuv_sw.c" FORMNAME="" UNITNAME="SDL_yuv_sw.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=$(BCB)/headers/SDL-1.2.4/include:$(BCB)/headers/SDL-1.2.4/src/video:$(BCB)/headers/SDL-1.2.4/src/timer/linux:$(BCB)/headers/SDL-1.2.4/src/timer:$(BCB)/headers/SDL-1.2.4/src/thread/linux:$(BCB)/headers/SDL-1.2.4/src/thread:$(BCB)/headers/SDL-1.2.4/src/joystick/linux:$(BCB)/headers/SDL-1.2.4/src/joystick:$(BCB)/headers/SDL-1.2.4/src/file:$(BCB)/headers/SDL-1.2.4/src/events:$(BCB)/headers/SDL-1.2.4/src/endian:$(BCB)/headers/SDL-1.2.4/src/cdrom/linux:$(BCB)/headers/SDL-1.2.4/src/cdrom:$(BCB)/headers/SDL-1.2.4/src/audio:$(BCB)/headers/SDL-1.2.4/src:$(BCB)/include/stlport:$(BCB)/include:$(BCB)/include/vcl:/usr/include
+Item1=$(BCB)/headers/SDL-1.2.4/src/video:$(BCB)/headers/SDL-1.2.4/src/timer/linux:$(BCB)/headers/SDL-1.2.4/src/timer:$(BCB)/headers/SDL-1.2.4/src/thread/linux:$(BCB)/headers/SDL-1.2.4/src/thread:$(BCB)/headers/SDL-1.2.4/src/joystick/linux:$(BCB)/headers/SDL-1.2.4/src/joystick:$(BCB)/headers/SDL-1.2.4/src/file:$(BCB)/headers/SDL-1.2.4/src/events:$(BCB)/headers/SDL-1.2.4/src/endian:$(BCB)/headers/SDL-1.2.4/src/cdrom/linux:$(BCB)/headers/SDL-1.2.4/src/cdrom:$(BCB)/headers/SDL-1.2.4/src/audio:$(BCB)/headers/SDL-1.2.4/src:$(BCB)/include/stlport:$(BCB)/include:$(BCB)/include/vcl:/usr/include
+
+[HistoryLists\hlLibraryPath]
+Count=1
+Item0=$(BCB)/headers/SDL-1.2.4/src/video:$(BCB)/headers/SDL-1.2.4/src/timer/linux:$(BCB)/headers/SDL-1.2.4/src/timer:$(BCB)/headers/SDL-1.2.4/src/thread/linux:$(BCB)/headers/SDL-1.2.4/src/thread:$(BCB)/headers/SDL-1.2.4/src/joystick/linux:$(BCB)/headers/SDL-1.2.4/src/joystick:$(BCB)/headers/SDL-1.2.4/src/file:$(BCB)/headers/SDL-1.2.4/src/events:$(BCB)/headers/SDL-1.2.4/src/endian:$(BCB)/headers/SDL-1.2.4/src/cdrom/linux:$(BCB)/headers/SDL-1.2.4/src/cdrom:$(BCB)/headers/SDL-1.2.4/src/audio:$(BCB)/headers/SDL-1.2.4/src:$(BCB)/lib/obj:$(BCB)/lib:/usr/lib:/lib:/usr/X11R6/lib:$(BCB)/bin
+
+[HistoryLists\hlConditionals]
+Count=3
+Item0=BUILD_SDL
+Item1=LINUX:BUILD_SDL
+Item2=_DEBUG
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=
+Launcher=/usr/X11R6/bin/xterm -T KylixDebuggerOutput -e bash -i -c %debuggee%
+UseLauncher=0
+DebugCWD=
+HostApplication=
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+
+[Linker]
+LibPrefix=
+LibPrefixDefined=0
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>
