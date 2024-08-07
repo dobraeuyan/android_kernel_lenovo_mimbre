@@ -1,3 +1,0 @@
-#!/bin/sh
-./xlat/gen.sh
-exec autoreconf -f -i "$@"
